@@ -1,0 +1,117 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-lightcyan: hsl(193, 38%, 86%);
+    --color-neongreen: hsl(150, 100%, 66%);
+    --color-grayishblue: hsl(217, 19%, 38%);
+    --color-darkgrayishblue: hsl(217, 19%, 24%);
+    --color-darkblue: hsl(218, 23%, 16%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--color-darkblue);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 94vh;
+}
+
+.card {
+    background: var(--color-darkgrayishblue);
+    width: 450px;
+    min-height: 150px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.head-advice {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    color: var(--color-neongreen);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+.body-advice {
+    color: var(--color-lightcyan);
+    font-size: 22px;
+    padding: 0 2.1rem;
+    font-weight: 800;
+}
+
+.pattern {
+    content: url(../images/pattern-divider-desktop.svg);
+    width: 80%;
+    margin: 2rem auto 1rem auto;
+}
+
+.button {
+    margin-bottom: -2rem;
+    transform: translateY(5px);
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: url(../images/icon-dice.svg) center center no-repeat, var(--color-neongreen);
+    background-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:hover {
+    box-shadow: 0 0 20px 1px var(--color-neongreen);
+}
+
+@media (max-width: 485px) {
+    .card {
+        width: 350px;
+        min-height: 150px;
+    }
+
+    .body-advice {
+        font-size: 23px;
+        padding: 0 1.5rem;
+    }
+
+    .pattern {
+        width: 100%;
+        height: 5%;
+        padding: 0 1.5rem;
+    }
+
+    .button {
+        width: 55px;
+        height: 55px;
+        background-size: 20px;
+        transform: translateY(0);
+    }
+}
+
+.attribution { 
+    padding-bottom: 3vh;
+    font-size: 11px; 
+    font-weight: 500;
+    text-align: center;
+    color: var(--color-lightcyan); 
+}
+.attribution a { 
+    color: var(--color-lightcyan); 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.attribution a:hover {
+    color: var(--color-neongreen);
+}
